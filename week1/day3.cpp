@@ -1,6 +1,5 @@
 /*
 Prison Cells After N Days
-
 Solution
 There are 8 prison cells in a row, and each cell is either occupied or vacant.
 
@@ -35,7 +34,7 @@ Example 2:
 
 Input: cells = [1,0,0,1,0,0,1,0], N = 1000000000
 Output: [0,0,1,1,1,1,1,0]
- 
+
 */
 
 //Solution 1: After some steps the pattern will repeat
