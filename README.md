@@ -14,3 +14,5 @@ Day 4: Ugly Number 2
 Day 5: Hamming Disease
 
 Day 6: Plus One
+
+Day 7: Island Perimeter
