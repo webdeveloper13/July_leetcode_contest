@@ -3,7 +3,7 @@ This repository will have all my solutions to July Leetcode contest
 
 # WEEK 1
 
-Day 1: nArranging Coins
+Day 1: Arranging Coins
 
 Day 2: Binary Tree Level Order Traversal II
 
