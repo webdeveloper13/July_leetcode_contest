@@ -17,6 +17,6 @@ Day 6: Plus One
 
 Day 7: Island Perimeter
 
-#WEEK 2
+# WEEK 2
 
 Day 8: 3 Sum
