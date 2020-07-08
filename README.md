@@ -16,3 +16,5 @@ Day 5: Hamming Disease
 Day 6: Plus One
 
 Day 7: Island Perimeter
+
+Day 8: 3 Sum
