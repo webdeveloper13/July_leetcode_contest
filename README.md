@@ -20,3 +20,5 @@ Day 7: Island Perimeter
 # WEEK 2
 
 Day 8: 3 Sum
+
+Day 9: Maximum Width of Binary Tree
