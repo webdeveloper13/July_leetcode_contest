@@ -39,3 +39,6 @@ Day 14:Angle Between Hands of a Clock
 # WEEK 3
 
 Day 15:Reverse Words in a String
+
+Day 16:Pow(x, n)
+
