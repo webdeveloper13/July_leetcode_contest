@@ -22,6 +22,8 @@ Note:
 -100.0 < x < 100.0
 n is a 32-bit signed integer, within the range [−231, 231 − 1]
 */
+
+
 class Solution {
 public:
     double myPow(double x, int n) {
