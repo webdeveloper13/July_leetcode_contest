@@ -27,6 +27,7 @@ The input prerequisites is a graph represented by a list of edges, not adjacency
 You may assume that there are no duplicate edges in the input prerequisites.
 */
 
+//Solution 1: TopoSorting using kahns algo
 /*Approach
 So here we use topological sort for a DAG to solve this problem
 To be precise this is Kahn's Algorithm where we have an indegree array
@@ -109,5 +110,86 @@ public:
             
         return ans;    
             
+    }
+};
+
+
+//Solution 2: TopoSorting using DFS+STACK
+
+/*
+Approach: Start dfs traversal from a node which is not yet visited and once a node does not have 
+an outgoing edge ,push it to stack and then backtrack.
+Finally pop from stack and you will get topological sorted order.
+*/
+/*
+Also as we know Topo Sorting only work for a DAG so before starting,we check if
+there is a cycle and cycle detection in an undirected graph can be done by Graph
+Colouring method
+*/
+
+class Solution {
+    /*Graph coloring: 0->not visited.
+    1->visited...
+    2->visited & processed
+    */
+    bool detectCycle_util(vector<vector<int>>& adj,vector<int>& visited,int v)
+    {
+        if(visited[v]==1)
+            return true;
+        if(visited[v]==2)
+            return false;
+        
+        visited[v]=1;   
+        for(int i=0;i<adj[v].size();++i)
+            if(detectCycle_util(adj,visited,adj[v][i]))
+                return true;
+        
+        visited[v]=2;   
+        return false;
+    }
+    
+    bool detectCycle(vector<vector<int>>& adj,int n)
+    {
+        vector<int> visited(n,0);
+        for(int i=0;i<n;++i)
+            if(!visited[i])
+                if(detectCycle_util(adj,visited,i))
+                    return true;
+        return false;
+    }
+    
+    void dfs(vector<vector<int>>& adj,int v,vector<bool>& visited,stack<int>& mystack)
+    {
+        visited[v] = true;
+        for(int i=0;i<adj[v].size();++i)
+            if(!visited[adj[v][i]])
+                dfs(adj,adj[v][i],visited,mystack);
+        
+        mystack.push(v);
+    }
+public:
+    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
+        int n=prerequisites.size();
+        vector<vector<int>> adj(numCourses);
+        for(int i=0;i<n;++i)
+            adj[prerequisites[i][1]].push_back(prerequisites[i][0]);
+        
+        vector<int> ans;
+        if(detectCycle(adj,numCourses))
+            return ans;        
+        
+        stack<int> mystack;
+        vector<bool> visited(numCourses,false);
+        
+        for(int i=0;i<numCourses;++i)
+            if(!visited[i])
+                dfs(adj,i,visited,mystack);
+        
+        while(!mystack.empty())
+        {
+            ans.push_back(mystack.top());
+            mystack.pop();
+        }
+        return ans;
     }
 };
