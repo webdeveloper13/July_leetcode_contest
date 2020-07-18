@@ -33,7 +33,7 @@ To be precise this is Kahn's Algorithm where we have an indegree array
 which computes number of incoming edge towards a node.
 In this case a value will have an incoming edge only if it has some prerequisite
 So we first find a course with zero prereq(zero indegree) we first do that course
-and we decrease the indegree by  for those subjects which were dependent on this course.
+and we decrease the indegree by 1 for those subjects which were dependent on this course.
 Likewise we keep repeating this.
 
 In the end we see if have covered all the nodes that is if we have the size of array
