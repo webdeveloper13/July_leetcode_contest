@@ -26,6 +26,20 @@ Note:
 The input prerequisites is a graph represented by a list of edges, not adjacency matrices. Read more about how a graph is represented.
 You may assume that there are no duplicate edges in the input prerequisites.
 */
+
+/*Approach
+So here we use topological sort for a DAG to solve this problem
+To be precise this is Kahn's Algorithm where we have an indegree array
+which computes number of incoming edge towards a node.
+In this case a value will have an incoming edge only if it has some prerequisite
+So we first find a course with zero prereq(zero indegree) we first do that course
+and we decrease the indegree by  for those subjects which were dependent on this course.
+Likewise we keep repeating this.
+
+In the end we see if have covered all the nodes that is if we have the size of array
+same ans numCourses if yes we return otherwise we return empty array
+*/
+
 auto i1 = []()
 {
         ios_base::sync_with_stdio(false);
