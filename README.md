@@ -46,3 +46,5 @@ Day 17:Top K Frequent Elements
 
 Day 18:Course Schedule II
 
+Day 19:Add Binary
+
