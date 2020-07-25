@@ -23,6 +23,26 @@ Note:
 This is a follow up problem to Find Minimum in Rotated Sorted Array.
 Would allow duplicates affect the run-time complexity? How and why?
 */
+
+/*Approach
+So basically we solve it by using binary search here.
+left = 0 right = n-1
+so while left is less than right
+we find mid
+Now we check if mid is greater than right
+if it is
+then we set left to mid+1 because if normally array is sorted the mid would be 
+less than right but here since mid element is greater than right element
+we conclude that mid is not minimum and hence we search on right side now.
+
+else if mid is less than right
+we shift right to mid
+
+if mid is equal to right (because of duplicates)
+we simply exclude that right element by decrementing it.(right--)
+*/
+
+
 auto i1 = []()
 {
         ios_base::sync_with_stdio(false);
