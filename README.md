@@ -64,4 +64,7 @@ Day 25:Find Minimum in Rotated Sorted Array II
 
 Day 26:Add Digits
 
+Day 27:Construct Binary Tree from Inorder and Postorder Traversal
+
+
 
