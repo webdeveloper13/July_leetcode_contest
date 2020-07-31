@@ -68,6 +68,14 @@ Day 27:Construct Binary Tree from Inorder and Postorder Traversal
 
 Day 28:Task Scheduler
 
+# WEEK 5
+
+Day 29:Buy and sell stock with cooldown
+
+Day 30:Word Break 2
+
+Day 31:Climbing Stairs
+
 
 
 
